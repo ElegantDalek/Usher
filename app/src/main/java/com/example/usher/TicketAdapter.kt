@@ -1,7 +1,5 @@
 package com.example.usher
 
-import android.content.Intent
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -29,10 +27,8 @@ class TicketAdapter (private val dataSet: List<String>):
 
     override fun onBindViewHolder(holder: TicketViewHolder, position: Int) {
         val text: TextView = holder.view.findViewById(R.id.ticket_name)
-        val image: ImageView = holder.view.findViewById(R.id.ticket_qr)
         val title = dataSet[position]
         text.text = title
-//        if (position == 0) image.setImageResource(R.drawable.bookbinder)
 
         holder.view.setOnClickListener {
             val context = it.context
