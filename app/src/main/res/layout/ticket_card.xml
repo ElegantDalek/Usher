@@ -30,40 +30,38 @@
             android:textSize="@dimen/title_size"/>
 
         <TextView
-            android:id="@+id/ticket_seat_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/padding_big"
-            android:paddingRight="@dimen/padding_big"
-            android:paddingBottom="@dimen/padding_default"
-            android:layout_below="@id/ticket_name"
-            android:textSize="20sp"
-            android:text="Seat AA15"/>
-
-        <TextView
             android:id="@+id/ticket_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/padding_big"
             android:paddingRight="@dimen/padding_big"
-            android:paddingBottom="@dimen/padding_default"
             android:layout_below="@id/ticket_name"
-            android:textSize="20sp"
-            android:layout_alignParentRight="true"
+            android:textSize="15sp"
             android:textStyle="italic"
             android:text="10/10/2019 - 7:30 PM"/>
 
         <TextView
-            android:id="@+id/ticket_description_short"
+            android:id="@+id/ticket_seat_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ticket_date"
+            android:paddingLeft="@dimen/padding_big"
+            android:paddingRight="@dimen/padding_big"
+            android:paddingBottom="@dimen/padding_default"
+            android:layout_alignParentRight="true"
+            android:text="Seat AA15"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ticket_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/padding_big"
             android:paddingRight="@dimen/padding_big"
             android:paddingBottom="@dimen/padding_default"
             android:layout_below="@id/ticket_date"
-            android:textSize="@dimen/body_size"
-            android:textStyle="italic"
-            android:text="A short length description of what you're going to see"/>
+            android:textSize="20sp"
+            android:text="Foellinger Great Hall"/>
     </RelativeLayout>
 
 </com.google.android.material.card.MaterialCardView>
