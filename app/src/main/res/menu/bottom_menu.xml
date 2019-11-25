@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
+    <item android:id="@+id/menu_1"
+        android:icon="@drawable/ic_event_black_24dp"
+        android:title="Events"/>
+    <item android:id="@+id/menu_2"
+        android:icon="@drawable/ic_center_focus_strong_black_24dp"
+        android:title="Tickets" />
+    <item android:id="@+id/menu_3"
+        android:icon="@drawable/ic_lock_black_24dp"
+        android:title="Lock" />
+</menu>
