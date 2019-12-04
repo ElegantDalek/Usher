@@ -3,7 +3,12 @@ package com.example.usher
 import android.app.Activity
 import android.app.ActivityOptions
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.Drawable
+import android.media.ThumbnailUtils
 import android.os.Parcelable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +22,7 @@ import android.util.Pair as UtilPair
 
 const val TITLE_INTENT = "title_message"
 const val DESCRIPTION_INTENT = "desc_message"
+const val IMAGE_INTENT = "image"
 
 
 class ExploreAdapter (private val activity: Activity):
@@ -37,12 +43,12 @@ class ExploreAdapter (private val activity: Activity):
 
         val titles = res.getStringArray(R.array.explore_show_titles)
         val descriptions = res.getStringArray(R.array.explore_show_descriptions)
-        val imageIds = res.getIntArray(R.array.explore_image_ids)
+        val imageInts = res.obtainTypedArray(R.array.explore_image_ids)
 
         for (i in 0 until size - 1) {
             val title = titles[i]
             val description = descriptions[i]
-            val image = imageIds[i]
+            val image = imageInts.getResourceId(i, -1)
             toReturn.add(Event(title, description, image))
         }
 
@@ -66,14 +72,16 @@ class ExploreAdapter (private val activity: Activity):
         val image: ImageView = holder.view.findViewById(R.id.image_bigcard)
         val event = dataSet[position]
         text.text = event.title
-        image.setImageResource(R.drawable.bizhiki)
 
+        val bitmap: Bitmap = BitmapFactory.decodeResource(activity.resources, event.image)
+        image.setImageBitmap(ThumbnailUtils.extractThumbnail(bitmap, 100, 100))
 
         holder.view.setOnClickListener {
             val context = it.context
             val intent = Intent(context, InfoActivity::class.java)
             intent.putExtra(TITLE_INTENT, event.title)
-            intent.putExtra(DESCRIPTION_INTENT, event.description)
+                .putExtra(DESCRIPTION_INTENT, event.description)
+                .putExtra(IMAGE_INTENT, event.image)
 
             val options = ActivityOptions.makeSceneTransitionAnimation(
                     activity,

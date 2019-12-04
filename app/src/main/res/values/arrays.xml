@@ -6,7 +6,7 @@
         <item>@drawable/bookbinder</item>
         <item>@drawable/strayhorn</item>
         <item>@drawable/bizhiki</item>
-        <item>@drawable/materialdesign_image</item>
+        <item>@drawable/bizhiki</item>
     </integer-array>
 
     <string-array name="explore_show_titles">

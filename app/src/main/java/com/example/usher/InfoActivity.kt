@@ -6,6 +6,7 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +30,10 @@ class InfoActivity : AppCompatActivity() {
         val desc = intent.getStringExtra(DESCRIPTION_INTENT)
         val descriptionView: TextView = findViewById(R.id.info_description)
         descriptionView.text = desc
+
+        val image = intent.getIntExtra(IMAGE_INTENT, -1)
+        val imageView: ImageView = findViewById(R.id.toolbar_image)
+        imageView.setImageResource(image)
 
         val button: Button = findViewById(R.id.button)
         button.setOnClickListener {
