@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="explore_image_ids">
+        <item>@drawable/kings_singers</item>
+        <item>@drawable/long_run</item>
+        <item>@drawable/bookbinder</item>
+        <item>@drawable/strayhorn</item>
+        <item>@drawable/bizhiki</item>
+        <item>@drawable/materialdesign_image</item>
+    </integer-array>
+
+    <string-array name="explore_show_titles">
+        <item>The King\'s Singers</item>
+        <item>Long Run</item>
+        <item>The Bookbinder</item>
+        <item>Strayhorn: Imagine</item>
+        <item>Bizhiki Dance</item>
+        <item>The Four Italian Tenors</item>
+    </string-array>
+    <string-array name="explore_show_descriptions">
+        <item>They say you can get lost in a good book. But it\'s worse to get lost in a bad one . . .
+            \n\n
+And so begins the magically intriguing journey of The Bookbinder, created by the inventive artists of New Zealand\’s award-winning Trick of the Light Theatre. This one-person show, written by Ralph McCubbin Howell and directed by Hannah Smith, pays homage to Old World fairy tale traditions with touches of darkness, mystery, and high-stakes daring as an apprentice bookbinder gets rather too engaged in his work. Trick of the Light employs puppetry, shadow play, music, and paper art, all bound together in a mayhem-filled fable for curious children and adventurous adults.
+            \n\n
+Connects to Illinois Learning Standards in Fine Arts, Social/Emotional Learning, Social Sciences, and Science.</item>
+        <item>They say you can get lost in a good book. But it\'s worse to get lost in a bad one . . .
+            \n\n
+And so begins the magically intriguing journey of The Bookbinder, created by the inventive artists of New Zealand\’s award-winning Trick of the Light Theatre. This one-person show, written by Ralph McCubbin Howell and directed by Hannah Smith, pays homage to Old World fairy tale traditions with touches of darkness, mystery, and high-stakes daring as an apprentice bookbinder gets rather too engaged in his work. Trick of the Light employs puppetry, shadow play, music, and paper art, all bound together in a mayhem-filled fable for curious children and adventurous adults.
+            \n\n
+Connects to Illinois Learning Standards in Fine Arts, Social/Emotional Learning, Social Sciences, and Science.</item>
+        <item>They say you can get lost in a good book. But it\'s worse to get lost in a bad one . . .
+            \n\n
+And so begins the magically intriguing journey of The Bookbinder, created by the inventive artists of New Zealand\’s award-winning Trick of the Light Theatre. This one-person show, written by Ralph McCubbin Howell and directed by Hannah Smith, pays homage to Old World fairy tale traditions with touches of darkness, mystery, and high-stakes daring as an apprentice bookbinder gets rather too engaged in his work. Trick of the Light employs puppetry, shadow play, music, and paper art, all bound together in a mayhem-filled fable for curious children and adventurous adults.
+            \n\n
+Connects to Illinois Learning Standards in Fine Arts, Social/Emotional Learning, Social Sciences, and Science.</item>
+        <item>They say you can get lost in a good book. But it\'s worse to get lost in a bad one . . .
+            \n\n
+And so begins the magically intriguing journey of The Bookbinder, created by the inventive artists of New Zealand\’s award-winning Trick of the Light Theatre. This one-person show, written by Ralph McCubbin Howell and directed by Hannah Smith, pays homage to Old World fairy tale traditions with touches of darkness, mystery, and high-stakes daring as an apprentice bookbinder gets rather too engaged in his work. Trick of the Light employs puppetry, shadow play, music, and paper art, all bound together in a mayhem-filled fable for curious children and adventurous adults.
+            \n\n
+Connects to Illinois Learning Standards in Fine Arts, Social/Emotional Learning, Social Sciences, and Science.</item>
+        <item>They say you can get lost in a good book. But it\'s worse to get lost in a bad one . . .
+            \n\n
+And so begins the magically intriguing journey of The Bookbinder, created by the inventive artists of New Zealand\’s award-winning Trick of the Light Theatre. This one-person show, written by Ralph McCubbin Howell and directed by Hannah Smith, pays homage to Old World fairy tale traditions with touches of darkness, mystery, and high-stakes daring as an apprentice bookbinder gets rather too engaged in his work. Trick of the Light employs puppetry, shadow play, music, and paper art, all bound together in a mayhem-filled fable for curious children and adventurous adults.
+            \n\n
+Connects to Illinois Learning Standards in Fine Arts, Social/Emotional Learning, Social Sciences, and Science.</item>
+        <item>They say you can get lost in a good book. But it\'s worse to get lost in a bad one . . .
+            \n\n
+And so begins the magically intriguing journey of The Bookbinder, created by the inventive artists of New Zealand\’s award-winning Trick of the Light Theatre. This one-person show, written by Ralph McCubbin Howell and directed by Hannah Smith, pays homage to Old World fairy tale traditions with touches of darkness, mystery, and high-stakes daring as an apprentice bookbinder gets rather too engaged in his work. Trick of the Light employs puppetry, shadow play, music, and paper art, all bound together in a mayhem-filled fable for curious children and adventurous adults.
+            \n\n
+Connects to Illinois Learning Standards in Fine Arts, Social/Emotional Learning, Social Sciences, and Science.</item>
+    </string-array>
+</resources>

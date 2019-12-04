@@ -39,12 +39,11 @@ class RecyclerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val mDataSet: List<String> = listOf("Example 1", "Example 2")
 
         viewManager = LinearLayoutManager(container!!.context)
-        viewAdapter = RecyclerAdapter(mDataSet)
+        viewAdapter = ExploreAdapter(activity!!)
 
-        val view: View = inflater.inflate(R.layout.fragment_recycler, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_explore, container, false)
 
         recyclerView = view.findViewById<RecyclerView>(R.id.fragment_recycler).apply {
             setHasFixedSize(true)

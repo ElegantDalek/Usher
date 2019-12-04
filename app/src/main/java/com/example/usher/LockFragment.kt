@@ -1,12 +1,20 @@
 package com.example.usher
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,6 +35,8 @@ class LockFragment : Fragment() {
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
 
+    private var pinned: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -40,7 +50,45 @@ class LockFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lock, container, false)
+        val view: View =  inflater.inflate(R.layout.fragment_lock, container, false)
+
+        val button: Button = view.findViewById(R.id.button)
+        button.setOnClickListener {
+
+            val money: TextView = view.findViewById(R.id.money)
+            val discount_money: TextView = view.findViewById(R.id.discount_money)
+            if (!pinned) {
+                // Set pinned and do not disturb mode
+                (context as Activity).startLockTask()
+                val bottomNavView: BottomNavigationView =
+                    activity!!.findViewById(R.id.bottom_navigation)
+                bottomNavView.visibility = View.INVISIBLE
+                button.text = "Unlock phone"
+
+                // Fade out old money, fade in new
+                money.startAnimation( AnimationUtils.loadAnimation(view.context, android.R.anim.slide_out_right))
+                money.visibility = View.INVISIBLE
+                discount_money.startAnimation( AnimationUtils.loadAnimation(view.context, android.R.anim.slide_in_left))
+                discount_money.visibility = View.VISIBLE
+
+            } else {
+                // Unpin and reset mode to whatever it was before
+                (context as Activity).stopLockTask()
+                val bottomNavView: BottomNavigationView =
+                    activity!!.findViewById(R.id.bottom_navigation)
+                bottomNavView.visibility = View.VISIBLE
+                button.text = "Lock phone"
+
+                discount_money.startAnimation( AnimationUtils.loadAnimation(view.context, android.R.anim.slide_out_right))
+                discount_money.visibility = View.INVISIBLE
+                money.startAnimation( AnimationUtils.loadAnimation(view.context, android.R.anim.slide_in_left))
+                money.visibility = View.VISIBLE
+            }
+
+            pinned = !pinned
+        }
+
+        return view
     }
 
     // TODO: Rename method, update argument and hook method into UI event

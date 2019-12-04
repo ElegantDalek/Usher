@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_event_black_24dp"
         android:title="Events"/>
     <item android:id="@+id/menu_2"
-        android:icon="@drawable/ic_center_focus_strong_black_24dp"
+        android:icon="@drawable/ic_local_play_black_24dp"
         android:title="Tickets" />
     <item android:id="@+id/menu_3"
         android:icon="@drawable/ic_lock_black_24dp"
