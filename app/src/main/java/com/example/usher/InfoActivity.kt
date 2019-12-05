@@ -1,5 +1,8 @@
 package com.example.usher
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.media.ThumbnailUtils
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -33,7 +36,10 @@ class InfoActivity : AppCompatActivity() {
 
         val image = intent.getIntExtra(IMAGE_INTENT, -1)
         val imageView: ImageView = findViewById(R.id.toolbar_image)
-        imageView.setImageResource(image)
+//        imageView.setImageResource(image)
+
+        val bitmap: Bitmap = BitmapFactory.decodeResource(resources, image)
+        imageView.setImageBitmap(ThumbnailUtils.extractThumbnail(bitmap, 1312, 1000))
 
         val button: Button = findViewById(R.id.button)
         button.setOnClickListener {

@@ -3,13 +3,11 @@ package com.example.usher
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.google.android.material.bottomnavigation.BottomNavigationMenu
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), RecyclerFragment.OnFragmentInteractionListener,
+class MainActivity : AppCompatActivity(), ExploreFragment.OnFragmentInteractionListener,
     TicketFragment.OnFragmentInteractionListener, LockFragment.OnFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +15,7 @@ class MainActivity : AppCompatActivity(), RecyclerFragment.OnFragmentInteraction
         setContentView(R.layout.activity_main)
 
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        val fragment1: Fragment = RecyclerFragment()
+        val fragment1: Fragment = ExploreFragment()
         val fragment2: Fragment = TicketFragment()
         val fragment3: Fragment = LockFragment()
 

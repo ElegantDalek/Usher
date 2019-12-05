@@ -3,6 +3,7 @@ package com.example.usher
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,12 +19,12 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [RecyclerFragment.OnFragmentInteractionListener] interface
+ * [ExploreFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [RecyclerFragment.newInstance] factory method to
+ * Use the [ExploreFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class RecyclerFragment : Fragment() {
+class ExploreFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
     private lateinit var viewManager: RecyclerView.LayoutManager

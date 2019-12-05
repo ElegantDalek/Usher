@@ -3,6 +3,7 @@ package com.example.usher
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,7 +15,13 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.os.Build
+import androidx.core.content.ContextCompat.getSystemService
+import android.app.NotificationManager
+
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -70,6 +77,23 @@ class LockFragment : Fragment() {
                 money.visibility = View.INVISIBLE
                 discount_money.startAnimation( AnimationUtils.loadAnimation(view.context, android.R.anim.slide_in_left))
                 discount_money.visibility = View.VISIBLE
+
+                val notificationManager =
+                    (context as FragmentActivity).getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !notificationManager.isNotificationPolicyAccessGranted) {
+
+                    val intent = Intent(
+                        android.provider.Settings
+                            .ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS
+                    )
+
+                    startActivity(intent)
+                }
+
+                val am: AudioManager = (activity as FragmentActivity).baseContext.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+                am.ringerMode = AudioManager.RINGER_MODE_SILENT
+
 
             } else {
                 // Unpin and reset mode to whatever it was before
